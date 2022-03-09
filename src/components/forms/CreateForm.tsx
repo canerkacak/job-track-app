@@ -75,10 +75,6 @@ export class CreateForm extends React.PureComponent<IProps, IState> {
                 type="text"
                 name="jobName"
                 value={this.state.jobName}
-                onKeyPress={(event) => {
-                  (event.charCode >= 65 && event.charCode <= 90) ||
-                    (event.charCode >= 97 && event.charCode <= 122);
-                }}
                 onChange={this.handleJobNameChange}
                 maxLength={255}
                 required
