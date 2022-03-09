@@ -83,9 +83,9 @@ export class CreateForm extends React.PureComponent<IProps, IState> {
                 value={this.state.jobPriority}
                 onChange={this.handleJobPriorityChange}
               >
-                <option value={1}>Urgent</option>
-                <option value={2}>Regular</option>
-                <option value={3}>Trivial</option>
+                <option value={1}>High</option>
+                <option value={2}>Medium</option>
+                <option value={3}>Low</option>
               </Form.Select>
             </Form.Group>
           </Col>

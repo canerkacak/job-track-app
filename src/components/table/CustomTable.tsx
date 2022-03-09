@@ -7,9 +7,9 @@ interface IProps {
   handleEditData(index: number): void;
 }
 const jobPriorityList = [
-  { id: 1, name: "Urgent" },
-  { id: 2, name: "Regular" },
-  { id: 3, name: "Trivial" },
+  { id: 1, name: "High" },
+  { id: 2, name: "Medium" },
+  { id: 3, name: "Low" },
 ];
 export class CustomTable extends React.PureComponent<IProps> {
   constructor(props: IProps) {
@@ -29,7 +29,7 @@ export class CustomTable extends React.PureComponent<IProps> {
             {
               title: "Job Priority",
               field: "jobPriority",
-              lookup: { 1: "Urgent", 2: "Regular", 3: "Trivial" },
+              lookup: { 1: "High", 2: "Medium", 3: "Low" },
               customSort: (a, b) => a.jobPriority - b.jobPriority,
               defaultSort: "asc",
               render: (rowData) => (
