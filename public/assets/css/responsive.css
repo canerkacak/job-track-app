@@ -1,0 +1,39 @@
+@media (max-width: 576px) {
+  .form-container {
+    flex-direction: column !important;
+  }
+  form .btn-primary {
+    margin-top: 2rem;
+  }
+  h3 {
+    padding-left: 1rem !important;
+  }
+  .col-12 {
+    margin: 0.3rem 0;
+  }
+  .job-priority-cell {
+    width: 110% !important;
+  }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+  .job-priority-cell {
+    width: 50% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .job-priority-cell {
+    width: 35% !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .job-priority-cell {
+    width: 25% !important;
+  }
+}
+
+@media (min-width: 1366px) {
+  .job-priority-cell {
+    width: 20% !important;
+  }
+}
