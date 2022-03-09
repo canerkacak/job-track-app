@@ -45,10 +45,15 @@ export class CreateForm extends React.PureComponent<IProps, IState> {
 
   private handleJobNameChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
-    this.setState((previous) => ({
-      ...previous,
-      [name]: value,
-    }));
+
+    const re = /^[A-Za-z]+$/;
+
+    if (value === "" || re.test(e.target.value)) {
+      this.setState((previous) => ({
+        ...previous,
+        [name]: value,
+      }));
+    }
   }
 
   private handleJobPriorityChange(e: React.ChangeEvent<HTMLSelectElement>) {
@@ -70,7 +75,12 @@ export class CreateForm extends React.PureComponent<IProps, IState> {
                 type="text"
                 name="jobName"
                 value={this.state.jobName}
+                onKeyPress={(event) => {
+                  (event.charCode >= 65 && event.charCode <= 90) ||
+                    (event.charCode >= 97 && event.charCode <= 122);
+                }}
                 onChange={this.handleJobNameChange}
+                maxLength={255}
                 required
               />
             </Form.Group>
